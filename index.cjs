@@ -3,7 +3,7 @@ const ruleMaps = require('./rules.cjs')
 module.exports = {
   configs: {
     recommended: {
-      plugins: ['oxlint'],
+      plugins: ['biome'],
       rules: ruleMaps,
     },
     'flat/recommended': {
