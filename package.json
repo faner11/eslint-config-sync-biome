@@ -16,8 +16,18 @@
       "types": "./index.d.ts"
     }
   },
-  "files": ["index.js", "index.d.ts", "index.cjs"],
-  "keywords": ["biome", "biomejs", "sync", "eslint", "rules"],
+  "files": [
+    "index.js",
+    "index.d.ts",
+    "index.cjs"
+  ],
+  "keywords": [
+    "biome",
+    "biomejs",
+    "sync",
+    "eslint",
+    "rules"
+  ],
   "author": "Bob <fhlqwe@gmail.com>",
   "homepage": "https://github.com/oxc-project/eslint-plugin-oxlint",
   "repository": {
@@ -30,5 +40,8 @@
     "@types/node": "^20.12.7",
     "tsx": "^4.7.3",
     "typescript": "^5.4.5"
+  },
+  "dependencies": {
+    "eslint-config-prettier": "^9.1.0"
   }
 }

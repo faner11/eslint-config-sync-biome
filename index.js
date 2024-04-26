@@ -1,5 +1,10 @@
-import ruleMaps from './rules.js'
+import biomeRules from './rules.js'
+import { rules } from 'eslint-config-prettier'
 
+const ruleMaps = {
+  ...biomeRules,
+  ...rules,
+}
 export default {
   configs: {
     recommended: {

@@ -57,6 +57,17 @@ And then you can add the following script to your `package.json`:
 
 You need to install both the [biome](https://marketplace.visualstudio.com/items?itemName=biomejs.biome) and [eslint](https://marketplace.visualstudio.com/items?itemName=dbaeumer.vscode-eslint) extensions
 
+In VSCode, to apply Biome and ESLint on save, you should have these in your project's `.vscode/settings.json`:
+```json
+{
+  "editor.codeActionsOnSave": {
+    "source.fixAll.eslint": "explicit",
+    "source.organizeImports.biome": "explicit",
+    "quickfix.biome": "explicit"
+  },
+  "editor.defaultFormatter": "biomejs.biome"
+}
+```
 ## License
 
 [MIT](https://github.com/faner11/eslint-config-sync-biome/blob/main/LICENSE)
