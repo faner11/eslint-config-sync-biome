@@ -7,6 +7,9 @@ declare const _default: {
     'flat/recommended': {
       rules: Record<string, string>
     }
+    'flat/only-linter': {
+      rules: Record<string, string>
+    }
   }
 }
 export default _default

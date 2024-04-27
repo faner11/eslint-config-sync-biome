@@ -1,6 +1,6 @@
 {
   "name": "eslint-config-sync-biome",
-  "version": "1.7.2",
+  "version": "1.7.4",
   "description": "Turn off all rules already supported by biome",
   "type": "module",
   "scripts": {
@@ -16,22 +16,22 @@
       "types": "./index.d.ts"
     }
   },
-  "files": ["index.js", "index.d.ts", "index.cjs"],
   "keywords": ["biome", "biomejs", "sync", "eslint", "rules"],
   "author": "Bob <fhlqwe@gmail.com>",
-  "homepage": "https://github.com/oxc-project/eslint-plugin-oxlint",
+  "homepage": "https://github.com/faner11/eslint-config-sync-biome",
   "repository": {
     "type": "git",
     "url": "https://github.com/faner11/eslint-config-sync-biome"
+  },
+  "peerDependencies": {
+    "eslint-config-prettier": "^9.1.0"
   },
   "license": "MIT",
   "devDependencies": {
     "@biomejs/biome": "1.7.1",
     "@types/node": "^20.12.7",
+    "eslint-config-prettier": "^9.1.0",
     "tsx": "^4.7.3",
     "typescript": "^5.4.5"
-  },
-  "dependencies": {
-    "eslint-config-prettier": "^9.1.0"
   }
 }

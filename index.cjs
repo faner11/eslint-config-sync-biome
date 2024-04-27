@@ -1,9 +1,10 @@
 const biomeRules = require('./rules.cjs')
-const { rules } = require('eslint-config-prettier')
+const eslintConfigPrettier = require('eslint-config-prettier')
 
+const { rules: prettierRules } = eslintConfigPrettier
 const ruleMaps = {
   ...biomeRules,
-  ...rules,
+  ...prettierRules,
 }
 module.exports = {
   configs: {
@@ -13,6 +14,9 @@ module.exports = {
     },
     'flat/recommended': {
       rules: ruleMaps,
+    },
+    'flat/only-linter': {
+      rules: biomeRules,
     },
   },
 }

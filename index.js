@@ -1,9 +1,10 @@
 import biomeRules from './rules.js'
-import { rules } from 'eslint-config-prettier'
+import eslintConfigPrettier from 'eslint-config-prettier'
 
+const { rules: prettierRules } = eslintConfigPrettier
 const ruleMaps = {
   ...biomeRules,
-  ...rules,
+  ...prettierRules,
 }
 export default {
   configs: {
@@ -13,6 +14,9 @@ export default {
     },
     'flat/recommended': {
       rules: ruleMaps,
+    },
+    'flat/only-linter': {
+      rules: biomeRules,
     },
   },
 }
