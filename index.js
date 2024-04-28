@@ -12,10 +12,14 @@ export default {
       plugins: ['biome'],
       rules: ruleMaps,
     },
+    'only-lint': {
+      plugins: ['biome'],
+      rules: biomeRules,
+    },
     'flat/recommended': {
       rules: ruleMaps,
     },
-    'flat/only-linter': {
+    'flat/only-lint': {
       rules: biomeRules,
     },
   },

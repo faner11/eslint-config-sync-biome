@@ -1,6 +1,6 @@
 {
   "name": "eslint-config-sync-biome",
-  "version": "1.7.4",
+  "version": "1.7.5",
   "description": "Turn off all rules already supported by biome",
   "type": "module",
   "scripts": {

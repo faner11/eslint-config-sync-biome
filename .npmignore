@@ -3,3 +3,5 @@ test/
 src/
 publish.js
 biome.jsonc
+tsconfig.json
+pnpm-lock.yaml

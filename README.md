@@ -8,7 +8,7 @@
 ## Installation
 
 ```shell
-pnpm add eslint-config-sync-biome --D
+pnpm add eslint-config-sync-biome eslint-config-prettier --D
 ```
 
 ## Usage
@@ -19,10 +19,10 @@ This plugin is optimized for flat config usage (eslint >= 9.0). See [here](https
 
 ```js
 // eslint.config.js
-import syncBiome from "eslint-config-sync-biome";
+import biome from "eslint-config-sync-biome";
 export default [
   ...// other plugins
-  syncBiome, // biome should be the last one
+  biome.configs["flat/recommended"], // biome should be the last one
 ];
 ```
 
@@ -40,7 +40,9 @@ module.exports = {
   ],
 }
 ```
-
+### Shared rules
+- `flat/recommended`/ `recommended` - Turn off all lint rules and format rules already supported by biome.(format rules originate from eslint-config-prettier).
+- `flat/only-lint`/ `only-lint` - Turn off lint rules only
 ### Run it before eslint
 
 And then you can add the following script to your `package.json`:
