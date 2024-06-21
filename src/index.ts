@@ -1,4 +1,12 @@
 import { writeFileSync } from 'node:fs'
+import { setGlobalDispatcher, ProxyAgent } from 'undici'
+
+if (process.env.https_proxy) {
+  // Corporate proxy uses CA not in undici's certificate store
+  process.env.NODE_TLS_REJECT_UNAUTHORIZED = '0'
+  const dispatcher = new ProxyAgent({ uri: new URL(process.env.https_proxy).toString() })
+  setGlobalDispatcher(dispatcher)
+}
 // https://github.com/biomejs/biome/blob/main/crates/biome_cli/src/execute/migrate/eslint_any_rule_to_biome.rs
 const fileUrl =
   'https://raw.githubusercontent.com/biomejs/biome/main/crates/biome_cli/src/execute/migrate/eslint_any_rule_to_biome.rs'
