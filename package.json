@@ -1,6 +1,6 @@
 {
   "name": "eslint-config-sync-biome",
-  "version": "1.9.0",
+  "version": "1.9.4",
   "description": "Turn off all rules already supported by biome",
   "type": "module",
   "scripts": {
@@ -34,7 +34,5 @@
     "tsx": "^4.7.3",
     "typescript": "^5.4.5"
   },
-  "dependencies": {
-    "undici": "^6.19.2"
-  }
+  "dependencies": {}
 }
